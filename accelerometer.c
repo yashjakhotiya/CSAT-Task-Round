@@ -41,8 +41,8 @@ int main()
 		zacc=calibrate(input(),MaxValue,MinValue,-1,2);
 		
 		//Finding roll and pitch with trigonometric functions
-		roll= (atan2(-xacc,zacc))*180/pi;
-		pitch= (atan2(yacc,sqrt(xacc*xacc+zacc*zacc)))*180/pi;
+		roll= (atan2(yacc,zacc))*180/pi;
+		pitch= (atan2(-xacc,sqrt(yacc*yacc+zacc*zacc)))*180/pi;
 		
 		//Final Print
 		printf("Acceleration along axes is-\n");
